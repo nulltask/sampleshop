@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS `user`; CREATE TABLE `user` (
+	`id` INTEGER AUTO_INCREMENT,
+	`name` TEXT NOT NULL,
+	`age` TINYINT NOT NULL,
+	`money` INTEGER NOT NULL,
+	
+	PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `item`; CREATE TABLE `item` (
+	`id` INTEGER AUTO_INCREMENT,
+	`type` TINYINT NOT NULL,
+	`name` TEXT NOT NULL,
+	`price` INTEGER NOT NULL,
+	
+	PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `user_item`; CREATE TABLE `user_item` (
+	`id` INTEGER AUTO_INCREMENT,
+	`user_id` INTEGER NOT NULL,
+	`item_id` INTEGER NOT NULL,
+	
+	PRIMARY KEY (`id`)
+);
